@@ -13,8 +13,8 @@ const EachBox = ({ image, title, brandimg, brandname, number1, number2, number3,
             <Image width="10px" height="10px" layout="responsive" src={image} alt="collection" className="collection-img-it" />
 
             <div className='all-desc' style={{ color: `${theme.color}` }} >
-                <div style={{ display: "flex", marginTop: "10px", gap: "6px" }}>
-                    <Image width="41px" height="10px" src={brandimg} alt="brandimg" className='brand-img-fd w-100 h-auto rounded-circle' />
+                <div style={{ display: "flex", marginTop: "10px", gap: "6px", alignItems: "center" }}>
+                    <Image width="41px" height="41" src={brandimg} alt="brandimg" className='brand-img-fd rounded-circle' />
                     <div className='brand-desc'>
                         <div className='fonts-14 fontw-700'>{title}</div>
                         <span className='fonts-14 fontw-200'>{brandname}</span>

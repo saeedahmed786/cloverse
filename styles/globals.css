@@ -1483,6 +1483,15 @@ body {
   .footer-lower {
     padding: 10px;
   }
+
+  .brand-img-fd {
+    width: 47px !important;
+    height: 47px !important;
+  }
+
+  .brand-desc .fonts-14 {
+    font-size: 10px !important;
+  }
 }
 
 .dark .navbar-toggler svg {
