@@ -6,6 +6,7 @@ import { FaTelegramPlane } from 'react-icons/fa'
 import { TbWorld } from 'react-icons/tb'
 import { useContext, useEffect } from 'react'
 import { ThemeContext } from '../themeContext'
+import BlueIcon from '../../images/blueicon.png'
 import Image from 'next/image'
 
 const DesignerProfile = () => {
@@ -67,11 +68,17 @@ const DesignerProfile = () => {
                             </div>
                             <div className="marginright">
                                 <div className="grey-text fontw-500 fonts-16">최저 거래가</div>
-                                <div className="fontw-700 fonts-20 black-color-text" id="text3">1,366</div>
+                                <div className="fontw-700 fonts-20 black-color-text d-flex gap-1 align-items-center" id="text3">
+                                    <Image width="25px" height="25px" src={BlueIcon} alt="blue-icon" style={{ display: "inline-block" }} className="fonts-12" />
+                                    <span>1,366</span>
+                                </div>
                             </div>
                             <div className="marginright">
                                 <div className="grey-text fontw-500 fonts-16">거래량</div>
-                                <div className="fontw-700 fonts-20 black-color-text" id='text4'>2,566</div>
+                                <div className="fontw-700 fonts-20 black-color-text d-flex gap-1 align-items-center" id='text4'>
+                                    <Image width="25px" height="25px" src={BlueIcon} alt="blue-icon" style={{ display: "inline-block" }} className="fonts-12" />
+                                    <span>2,566</span>
+                                </div>
                             </div>
                         </div>
                         <div>

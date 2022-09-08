@@ -5,7 +5,7 @@ import { SiDiscord } from 'react-icons/si'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { TbWorld } from 'react-icons/tb'
 import { Dropdown, Input, Button, Menu, Space } from 'antd'
-import { BsListUl, BsGridFill } from 'react-icons/bs'
+import { BsListUl, BsGridFill, BsFillGrid3X3GapFill } from 'react-icons/bs'
 import ProfileImg from '../images/profile.png'
 import GridView from "../components/fdCollectionDetail/collection_grid";
 import ListView from "../components/fdCollectionDetail/collection_list";
@@ -57,7 +57,7 @@ const CollectionDetail = () => {
     }, [theme])
 
     const listClicked = () => {
-        setIsList(true)
+        setIsList(false)
 
         elem1.classList.add("active-icon")
         elem2.classList.remove("active-icon")
@@ -67,7 +67,7 @@ const CollectionDetail = () => {
     }
 
     const gridClicked = () => {
-        setIsList(false)
+        setIsList(true)
         elem2.classList.add("active")
         elem1.classList.remove("active")
         elem1.classList.add("not-active")
@@ -119,11 +119,13 @@ const CollectionDetail = () => {
                             </Space>
                         </Button>
                     </Dropdown>
-                    <div className="click-icon active-icon" id="list" onClick={listClicked} style={{ marginTop: "20px", }}>
-                        <BsListUl />
-                    </div>
-                    <div className="click-icon not-active" id="grid" onClick={gridClicked} style={{ marginTop: "20px", }}>
-                        <BsGridFill />
+                    <div className="d-flex">
+                        <div className="click-icon active-icon" id="list" onClick={listClicked} style={{ marginTop: "20px", }}>
+                            <BsFillGrid3X3GapFill />
+                        </div>
+                        <div className="click-icon not-active" id="grid" onClick={gridClicked} style={{ marginTop: "20px", }}>
+                            <BsGridFill />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,11 +187,21 @@ const CollectionDetail = () => {
                 <Tabs defaultActiveKey="1">
                     <Tab eventKey="1" title="아이템">
                         <LowerComponent />
-                        <ListView />
+                        {
+                            isList ?
+                                <ListView />
+                                :
+                                <GridView />
+                        }
                     </Tab>
                     <Tab eventKey="2" title="거래내역">
                         <LowerComponent />
-                        <GridView />
+                        {
+                            isList ?
+                                <ListView />
+                                :
+                                <GridView />
+                        }
                     </Tab>
                 </Tabs>
 

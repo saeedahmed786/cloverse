@@ -33,10 +33,11 @@ const ImageCard = ({ image, sn }) => {
       <Image src={image} width="10px" height="10px" layout="responsive" alt="coat" className="collection-img-it" />
       <div className='all-desc' id={`_${sn}props-body1`}>
         <div className='fontw-700 fonts-16px' id={`_${sn}text9`}>ID 1234</div>
-        <div style={{ display: "grid", position: "relative" }}>
+        <div style={{ display: "flex", position: "relative", alignItems: "center", marginTop: "15px" }}>
           <div className='fonts-12 fontw-200' id={`_${sn}text10`}>직전가</div>
-          <div className='right0 fonts-14 fontw-700' id={`_${sn}text11`}>
-            <Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" style={{ display: "inline-block" }} />  1202
+          <div className='right0 fonts-14 fontw-700 d-flex gap-1 align-items-center' id={`_${sn}text11`}>
+            <Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" style={{ display: "inline-block" }} />
+            <span>1202</span>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { MdVerified } from 'react-icons/md'
 import BlueIcon from '../../../images/blueicon.png'
 
 const EachBox = ({ image, title, brandimg, brandname, number1, number2, number3, number4 }) => {
@@ -10,8 +12,10 @@ const EachBox = ({ image, title, brandimg, brandname, number1, number2, number3,
                     <div style={{ display: "flex", marginTop: "10px" }}>
                         <Image src={brandimg} width="10px" height="10px" layout="responsive" alt="brandimg" className='brand-img-fd' />
                         <div className='brand-desc'>
-                            <div className='fonts-16 fontw-700'>{title}</div>
-                            <small className='fonts-14 fontw-200'>by {brandname}</small>
+                            <a className='text-dark' href="/detail">
+                                <div className='fonts-16 fontw-700'>{title}</div>
+                            </a>
+                            <small className='fonts-14 fontw-200'>by {brandname} <MdVerified style={{ color: "blue" }} /></small>
                         </div>
                     </div>
                     <div className='collec-number'>
