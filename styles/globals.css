@@ -362,26 +362,21 @@
   color: white;
 }
 
-/* .banner-right {
-  position: absolute;
-  right: 96px;
-} */
-
 @media (min-width:0px) and (max-width:900px) {
   .banner {
-    display: block;
+    /* display: block; */
     height: fit-content;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
   }
 
   .banner-left {
-    margin: 20px 20px 20px 50px;
+    /* margin: 20px 20px 20px 50px; */
     height: fit-content;
   }
 
   .banner-right {
     position: static;
-    margin: 20px 20px 20px 30px;
+    /* margin: 20px 20px 20px 30px; */
   }
 }
 
@@ -627,11 +622,6 @@
   }
 }
 
-
-
-
-
-
 body {
   margin: 0;
   padding: 0;
@@ -655,12 +645,13 @@ body {
 }
 
 .collection-five {
-  width: 100%;
+  width: 100% !important;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   display: grid !important;
+  column-gap: 25px;
   grid-column-gap: 25px;
   grid-row-gap: 20px;
-  overflow-x: scroll !important;
+  overflow-x: auto !important;
 }
 
 .collection-seven {
@@ -810,10 +801,10 @@ body {
   margin-top: 50px;
 }
 
-.ant-btn {
+.home .ant-btn {
   width: fit-content;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding: 0px 30px !important;
+  height: 48px;
 }
 
 .ant-btn.blue-text-btn {
@@ -911,6 +902,7 @@ body {
   background-color: #fafafa !important;
   border: none !important;
   border-radius: 0px;
+  color: #4F52EF !important;
 }
 
 .ant-btn._9marginbtn {
@@ -947,12 +939,12 @@ body {
 .black-blank {
   height: 304px;
   background-color: #07111C;
-  /* position: relative; */
+  position: relative;
 }
 
 .black-blank .designer-profile-container {
   position: absolute !important;
-  top: 280px !important;
+  top: 219px !important;
   left: 15% !important;
 }
 
@@ -967,6 +959,10 @@ body {
 
 .ant-btn.paddingright60 {
   padding: 0px 60px !important;
+}
+
+.common-comp {
+  margin-top: 80px !important;
 }
 
 .center-button .ant-btn.paddingright60 {
@@ -1475,14 +1471,6 @@ body {
   border: none;
 }
 
-@media (min-width:0px) and (max-width:1000px) {
-  .navbar {
-    height: fit-content;
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-}
-
 
 .dark .nav-logo svg {
   color: white !important;
@@ -1498,6 +1486,12 @@ body {
 }
 
 @media (min-width: 0px) and (max-width: 1000px) {
+  .navbar {
+    height: fit-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
   .navbar-light .ant-input-affix-wrapper {
     width: 100% !important;
     margin-bottom: 23px;
@@ -1570,5 +1564,101 @@ a {
 }
 
 .dark .text-dark {
+  color: white !important;
+}
+
+@media (max-width:500px) {
+  .home .slick-dots {
+    bottom: 60px !important;
+    text-align: center !important;
+    padding-left: 2% !important;
+  }
+
+  .home .main-component {
+    text-align: center !important;
+    background-position: center center !important;
+  }
+
+  .home .main-component .marginbottom10 {
+    display: block !important;
+    margin: 0px auto !important;
+    margin-top: 10px !important;
+  }
+
+  .banner {
+    padding: 19px 10px;
+  }
+
+  .banner-left {
+    font-weight: 700;
+    font-size: 12px !important;
+    color: white;
+  }
+
+  .banner-right .ant-btn.height48 {
+    height: 32px !important;
+    font-size: 14px !important;
+  }
+
+  .banner .banner-right .ant-btn {
+    margin-right: 0px;
+  }
+
+  .collection-all {
+    margin-top: 10px !important;
+  }
+
+  .collection-all .brand-desc .fonts-16 {
+    font-size: 12px !important;
+  }
+
+  .center-button {
+    text-align: center !important;
+    padding-top: 19px !important;
+  }
+
+  .footer-upper {
+    margin-top: 23px !important;
+  }
+
+  .footer-left {
+    padding: 17px 23px !important;
+    text-align: center !important;
+  }
+
+  .collection-all .collection-five .ant-btn {
+    height: auto !important;
+    padding: 0px 4px !important;
+  }
+
+  .black-blank .designer-profile-container {
+    left: 4% !important;
+    /* top: 21px !important; */
+  }
+
+  .collection-all .common-comp {
+    margin-top: 80px;
+  }
+
+  .collection-all .lower-first .ant-input-affix-wrapper {
+    width: 100% !important;
+  }
+
+
+  .eachPage .gridrow2 .ant-btn {
+    margin-bottom: 10px !important;
+    height: 48px !important;
+  }
+
+  .eachPage .fonts-16, .eachPage .fonts-16x {
+    font-size: 12px !important;
+  }
+
+  .eachPage .table img {
+    display: none !important;
+  }
+}
+
+.dark .black-color-text {
   color: white !important;
 }

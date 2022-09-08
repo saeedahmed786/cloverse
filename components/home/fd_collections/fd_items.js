@@ -14,6 +14,7 @@ const FDCollections = () => {
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 4,
+        center: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -36,7 +37,7 @@ const FDCollections = () => {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 1
                 }
             }
         ]

@@ -15,12 +15,6 @@ const EachItem = () => {
    const LeftContent = () => {
       return (
          <div className="left-grid">
-            <div className="fontw-700 fonts-30" id="eachtopic">ID 1234</div>
-            <div className="grey-dark" style={{ display: "flex", marginTop: "13px" }}>
-               <div className='marginright fonts-16 grey-dark fontw-500'>Owned by <span className="color-blue">SDfsf...43sf</span></div>
-               <div className='marginright fonts-16 grey-dark fontw-500'><MdRemoveRedEye size={15} /> 102 views</div>
-               <div className='marginright fonts-16 grey-dark fontw-500'><MdFavorite size={15} /> 5 favorites</div>
-            </div>
             <DesignerProfile />
             <Description />
             <Properties />
@@ -30,12 +24,20 @@ const EachItem = () => {
    }
 
    return (
-      <div className="collection-all main-comp" style={{ marginTop: "100px" }}>
-         <div className="upper-grid row">
-            <div className='col-lg-8'>
+      <div className="collection-all eachPage main-comp" style={{ marginTop: "100px" }}>
+         <div className='my-4 mt-5'>
+            <div className="fontw-700 fonts-30" id="eachtopic">ID 1234</div>
+            <div className="grey-dark" style={{ display: "flex", marginTop: "13px" }}>
+               <div className='marginright fonts-16 grey-dark fontw-500'>Owned by <span className="color-blue">SDfsf...43sf</span></div>
+               <div className='marginright fonts-16 grey-dark fontw-500'><MdRemoveRedEye size={15} /> 102 views</div>
+               <div className='marginright fonts-16 grey-dark fontw-500'><MdFavorite size={15} /> 5 favorites</div>
+            </div>
+         </div>
+         <div className="row">
+            <div className='col-lg-8 order-1 order-lg-0'>
                <LeftContent />
             </div>
-            <div className='col-lg-4'>
+            <div className='col-lg-4 order-0 order-lg-1'>
                <div className="right-grid">
                   <Image src={BlackCoat} width="10px" height="10px" layout="responsive" alt="profile" className='img-big' />
                   <div className='grey-border-box mt-2' id="grey-body">

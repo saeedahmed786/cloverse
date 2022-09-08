@@ -120,10 +120,10 @@ const CollectionDetail = () => {
                         </Button>
                     </Dropdown>
                     <div className="d-flex">
-                        <div className="click-icon active-icon" id="list" onClick={listClicked} style={{ marginTop: "20px", }}>
+                        <div className={`click-icon ${!isList ? "active-icon" : "not-active"}`} id="list" onClick={listClicked} style={{ marginTop: "20px", }}>
                             <BsFillGrid3X3GapFill />
                         </div>
-                        <div className="click-icon not-active" id="grid" onClick={gridClicked} style={{ marginTop: "20px", }}>
+                        <div className={`click-icon ${isList ? "active-icon" : "not-active"}`} id="grid" onClick={gridClicked} style={{ marginTop: "20px", }}>
                             <BsGridFill />
                         </div>
                     </div>

@@ -13,40 +13,52 @@ const Offers = () => {
         </h2>
         <div id="collapse4" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
           <div className="accordion-body black-color-text" style={{ backgroundColor: "#FBFBFB" }}>
-            <Table responsive style={{ marginBottom: "0px" }}>
-              <thead id='header-head0'>
-                <tr>
-                  <th className='fontw-500 fonts-16px grey-dark'>From</th>
-                  <th className='fontw-500 fonts-16px grey-dark'>Expiration</th>
-                  <th className='fontw-500 fonts-16px grey-dark'>Price</th>
-                  <th className='fontw-500 fonts-16px grey-dark'>Floor Difference</th>
-                </tr>
-              </thead>
-              <tbody id='header-body4' className='fontw-500 fonts-16 black-color-text'>
-                <tr>
-                  <td className="">RAF193</td>
-                  <td>about 24 hours</td>
-                  <td><Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" style={{ display: "inline-block" }} />1,234</td>
-                  <td>7% below</td>
-                </tr>
-                <tr>
-                  <td>RAF193</td>
-                  <td>about 24 hours</td>
-                  <td><Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" style={{ display: "inline-block" }} />1,234</td>
-                  <td>7% below</td>
-                </tr>
-                <tr>
-                  <td>RAF193</td>
-                  <td>about 24 hours</td>
-                  <td><Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" style={{ display: "inline-block" }} />1,234</td>
-                  <td>7% below</td>
-                </tr>
-              </tbody>
-            </Table>
+            {/* <Table responsive style={{ marginBottom: "0px" }}> */}
+            <div className="table-responsive">
+              <table className="table">
+                <thead id='header-head0'>
+                  <tr>
+                    <th className='fontw-500 fonts-16px grey-dark'>From</th>
+                    <th className='fontw-500 fonts-16px grey-dark'>Expiration</th>
+                    <th className='fontw-500 fonts-16px grey-dark'>Price</th>
+                    <th className='fontw-500 fonts-16px grey-dark'>Floor Difference</th>
+                  </tr>
+                </thead>
+                <tbody id='header-body4' className='fontw-500 fonts-16 black-color-text'>
+                  <tr>
+                    <td className="">RAF193</td>
+                    <td>about 24 hours</td>
+                    <td className='d-flex align-items-center'>
+                      <Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" />
+                      <span>1,234</span>
+                    </td>
+                    <td>7% below</td>
+                  </tr>
+                  <tr>
+                    <td>RAF193</td>
+                    <td>about 24 hours</td>
+                    <td className='d-flex align-items-center'>
+                      <Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" />
+                      <span>1,234</span>
+                    </td>
+                    <td>7% below</td>
+                  </tr>
+                  <tr>
+                    <td>RAF193</td>
+                    <td>about 24 hours</td>
+                    <td className='d-flex align-items-center'>
+                      <Image width="16px" height="16px" src={BlueIcon} alt="blue-icon" />
+                      <span>1,234</span>
+                    </td>
+                    <td>7% below</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

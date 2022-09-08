@@ -1,7 +1,7 @@
 import { Fragment, useContext, useState } from "react";
 import { MdKeyboardArrowDown, MdModeEdit } from "react-icons/md";
 import { Dropdown, Input, Button, Menu, Space } from 'antd'
-import { BsListUl, BsGridFill } from 'react-icons/bs'
+import { BsGridFill, BsFillGrid3X3GapFill } from 'react-icons/bs'
 import ProfileImg from '../images/profile.png'
 import GridView from "../components/fddesigneredit/collection_grid";
 import ListView from "../components/fddesigneredit/collection_list";
@@ -21,17 +21,17 @@ const FDDesignerEdit = () => {
     var elem2 = typeof window !== "undefined" && document.getElementById("grid")
 
     const listClicked = () => {
-        setIsList(true)
-        elem1.classList.add("active")
-        elem2.classList.remove("active")
+        setIsList(false)
+        elem1.classList.add("active-icon")
+        elem2.classList.remove("active-icon")
         elem2.classList.add("not-active")
         elem1.classList.remove("not-active")
     }
 
     const gridClicked = () => {
-        setIsList(false)
-        elem2.classList.add("active")
-        elem1.classList.remove("active")
+        setIsList(true)
+        elem2.classList.add("active-icon")
+        elem1.classList.remove("active-icon")
         elem1.classList.add("not-active")
         elem2.classList.remove("not-active")
     }
@@ -76,11 +76,13 @@ const FDDesignerEdit = () => {
                             </Space>
                         </Button>
                     </Dropdown>
-                    <div className="click-icon active margintop10" id="list" onClick={listClicked}>
-                        <BsListUl />
-                    </div>
-                    <div className="click-icon not-active margintop10" id="grid" onClick={gridClicked}>
-                        <BsGridFill />
+                    <div className="d-flex">
+                        <div className={`click-icon ${!isList ? "active-icon" : "not-active"}`} id="list" onClick={listClicked} style={{ marginTop: "20px", }}>
+                            <BsFillGrid3X3GapFill />
+                        </div>
+                        <div className={`click-icon ${isList ? "active-icon" : "not-active"}`} id="grid" onClick={gridClicked} style={{ marginTop: "20px", }}>
+                            <BsGridFill />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,11 +110,21 @@ const FDDesignerEdit = () => {
                 <Tabs defaultActiveKey="보유한">
                     <Tab eventKey="보유한" title="보유한">
                         <LowerComponent />
-                        <ListView />
+                        {
+                            isList ?
+                                <ListView />
+                                :
+                                <GridView />
+                        }
                     </Tab>
                     <Tab eventKey="제안한" title="제안한">
                         <LowerComponent />
-                        <GridView />
+                        {
+                            isList ?
+                                <ListView />
+                                :
+                                <GridView />
+                        }
                     </Tab>
                 </Tabs>
             </div>
